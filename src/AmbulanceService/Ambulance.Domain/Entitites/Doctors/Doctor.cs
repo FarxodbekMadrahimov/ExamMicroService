@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
+using Ambulance.Domain.Entitites.AmbulancesInfo;
 
 namespace Ambulance.Domain.Entitites.Doctors
 {
@@ -25,6 +26,11 @@ namespace Ambulance.Domain.Entitites.Doctors
         [ForeignKey("EmergencyCall")]
         public int? EmergencyCallId { get; set; }
         [JsonIgnore]
-        public EmergencyCalling? EmergencyCall { get; set; }       
+        public EmergencyCalling? EmergencyCall { get; set; }
+
+        public static implicit operator Doctor?(AmbulanceInfo? v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
