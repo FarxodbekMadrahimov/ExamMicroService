@@ -24,8 +24,7 @@ namespace Ambulance.Application.UseCases.Doctors.Handler.DocotorHandlers
         public async Task<int> Handle(CreateDoctorCommand request, CancellationToken cancellationToken)
         {
             Doctor? ambulanceInfo = await _context.doctors.FirstOrDefaultAsync(cancellationToken);
-            if (ambulanceInfo != null)
-                throw new Exception();
+  
 
 
             Doctor doctor = new Doctor()

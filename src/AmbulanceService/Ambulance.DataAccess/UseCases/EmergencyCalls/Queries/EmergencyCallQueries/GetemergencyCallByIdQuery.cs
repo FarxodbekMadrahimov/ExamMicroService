@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ambulance.Application.UseCases.EmergencyCalls.Queries.EmergencyCallQueries
 {
-    public class GetemergencyCallByIdQuery : IRequest<EmergencyCalling>
+    public class GetEmergencyCallByIdQueries : IRequest<EmergencyCalling>
     {
         public int Id { get; set; }
     }

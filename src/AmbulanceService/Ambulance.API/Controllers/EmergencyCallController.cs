@@ -63,7 +63,7 @@ public class EmergencyCallController : ControllerBase
     [HttpGet]
     public async ValueTask<IActionResult> GetByIdAsync(int Id)
     {
-        GetemergencyCallByIdQuery @EmrgencyCall = new GetemergencyCallByIdQuery()
+        GetEmergencyCallByIdQueries @EmrgencyCall = new GetEmergencyCallByIdQueries()
         {
             Id = Id,
         };
