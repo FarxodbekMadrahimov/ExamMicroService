@@ -3,15 +3,17 @@ using Ambulance.Application.UseCases.AmbulanceInfos.Queries.AmbulanceInfoQueries
 using Ambulance.Application.UseCases.Doctors.Command.DoctorCommands;
 using Ambulance.Application.UseCases.Doctors.Handler.DocotorHandlers;
 using Ambulance.Application.UseCases.Doctors.Queries.DoctorQueries;
+using Ambulance.Application.UseCases.EmergencyCalls.Queries.EmergencyCallQueries;
 using Ambulance.Domain.Entitites.AmbulancesInfo;
 using Ambulance.Domain.Entitites.Doctors;
+using Ambulance.Domain.Entitites.EmergencyCalls;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ambulance.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class DoctorsController : ControllerBase
     {
@@ -37,7 +39,36 @@ namespace Ambulance.API.Controllers
 
             return Ok(classes);
         }
+        [HttpPut]
+        public async ValueTask<IActionResult> UpdateAsync([FromForm] UpdateDoctorCommand @updateDoctor)
+        {
+            int result = await _mediator.Send(@updateDoctor);
+            return Ok(result);
+        }
+        [HttpDelete]
+        public async ValueTask<IActionResult> DeleteAsync(int Id)
+        {
+            DeleteDoctorCommand doctor = new DeleteDoctorCommand()
+            {
+                Id = Id
+            };
 
+            int result = await _mediator.Send(doctor);
+
+            return Ok(result);
+        }
+        [HttpGet]
+        public async ValueTask<IActionResult> GetByIdAsync(int Id)
+        {
+            GetByIdQueries doctor = new GetByIdQueries()
+            {
+                Id = Id,
+            };
+
+            Doctor result = await _mediator.Send(doctor);
+
+            return Ok(result);
+        }
 
     }
 }

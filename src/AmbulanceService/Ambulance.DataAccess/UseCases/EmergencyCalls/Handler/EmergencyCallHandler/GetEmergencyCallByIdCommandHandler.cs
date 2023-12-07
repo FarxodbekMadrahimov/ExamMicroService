@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Ambulance.Application.UseCases.EmergencyCalls.Handler.EmergencyCallHandler
 {
-    public class GetEmergencyCallByIdCommandHandler : IRequestHandler<GetemergencyCallByIdQuery, EmergencyCalling>
+    public class GetEmergencyCallByIdCommandHandler : IRequestHandler<GetEmergencyCallByIdQueries, EmergencyCalling>
     {
         private readonly IAmbulanceDbContext _context;
         public GetEmergencyCallByIdCommandHandler(IAmbulanceDbContext context)
@@ -19,7 +19,7 @@ namespace Ambulance.Application.UseCases.EmergencyCalls.Handler.EmergencyCallHan
             _context = context;
         }
 
-        public async Task<EmergencyCalling> Handle(GetemergencyCallByIdQuery request, CancellationToken cancellationToken)
+        public async Task<EmergencyCalling> Handle(GetEmergencyCallByIdQueries request, CancellationToken cancellationToken)
         {
             EmergencyCalling? emergencyCalling = await _context.emergencyCalls.FirstOrDefaultAsync(x => x.Id == request.Id, cancellationToken);
 
