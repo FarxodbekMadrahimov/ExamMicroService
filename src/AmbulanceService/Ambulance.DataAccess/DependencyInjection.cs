@@ -14,6 +14,11 @@ namespace Ambulance.Application
         public static IServiceCollection AddAplication(this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.InstanceName = "Redis";
+                options.Configuration = "127.0.0.1:6379";
+            });
 
             return services;
         }
