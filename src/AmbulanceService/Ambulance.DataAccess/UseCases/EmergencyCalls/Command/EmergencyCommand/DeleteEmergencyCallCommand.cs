@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Ambulance.Application.UseCases.EmergencyCalls.Command.EmergencyCommand
 {
-    public class DeleteEmergencyCallCommand : IRequest<bool>
+    public class DeleteAmbulanceInfoHandler : IRequest<bool>
     {
         public int Id { get; set; }
     }

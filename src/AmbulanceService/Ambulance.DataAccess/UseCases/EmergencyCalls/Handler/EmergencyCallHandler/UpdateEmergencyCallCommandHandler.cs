@@ -33,7 +33,7 @@ namespace Ambulance.Application.UseCases.EmergencyCalls.Handler.EmergencyCallHan
             emergencyCalling.AmbulanceDispatched = request.AmbulanceDispatched;
             emergencyCalling.AmbulanceId = request.AmbulanceId;
 
-            _context.emergencyCalls.Add(emergencyCalling);
+            _context.emergencyCalls.Update(emergencyCalling);
             int result = await _context.SaveChangesAsync(cancellationToken);
             return result;
         }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using Ambulance.Domain.Dtos.AmbulanceInfoDtos;
+using Ambulance.Domain.updateDtos;
+using MediatR;
+
 
 namespace Ambulance.Application.UseCases.AmbulanceInfos.Commands.AmbulanceInfoCommand
 {
-    internal class UpdateAmbulanceInfoCommand
+    public class UpdateAmbulanceInfoCommand : AmbulanceInfoDto , IRequest<int>
     {
+        public int Id { get; set; }
     }
 }

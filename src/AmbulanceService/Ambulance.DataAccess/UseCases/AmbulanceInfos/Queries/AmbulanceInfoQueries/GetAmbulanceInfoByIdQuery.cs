@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace Ambulance.Application.UseCases.AmbulanceInfos.Queries.AmbulanceInfoQueries
 {
-    internal class GetAmbulanceInfoByIdQuery
+    public class GetAmbulanceInfoByIdQuery
     {
     }
 }
