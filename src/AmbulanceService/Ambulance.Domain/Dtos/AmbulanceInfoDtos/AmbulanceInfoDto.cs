@@ -11,7 +11,7 @@ namespace Ambulance.Domain.Dtos.AmbulanceInfoDtos
 {
     public class AmbulanceInfoDto
     {
-        public int Id { get; set; }
+        
         public string Model { get; set; }
         public bool Available { get; set; }
     }

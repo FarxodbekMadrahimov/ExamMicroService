@@ -24,15 +24,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\EmergencyCalls\Command\AmbulanceInfoCommand\" />
     <Folder Include="UseCases\EmergencyCalls\Command\DoctorCommand\" />
     <Folder Include="UseCases\EmergencyCalls\Command\PatientCommand\" />
     <Folder Include="UseCases\EmergencyCalls\Handler\DoctorHandler\" />
-    <Folder Include="UseCases\EmergencyCalls\Handler\AmbulanceInfoHandler\" />
     <Folder Include="UseCases\EmergencyCalls\Handler\PatientHandler\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\DoctorQueries\" />
-    <Folder Include="UseCases\EmergencyCalls\Queries\AmbulanceInfoQueries\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\PatientQueries\" />
+    <Folder Include="UseCases\NewFolder\" />
   </ItemGroup>
 
 </Project>
