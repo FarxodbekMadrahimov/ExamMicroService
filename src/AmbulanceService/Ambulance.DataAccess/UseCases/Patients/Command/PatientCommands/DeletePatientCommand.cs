@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+
 
 namespace Ambulance.Application.UseCases.Patients.Command.PatientCommands
 {
-    internal class DeletePatientCommand
+    public class DeletePatientCommand : IRequest<int>
     {
+        public int Id { get; set; }
     }
 }
