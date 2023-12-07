@@ -9,7 +9,7 @@ using System.Security.Claims;
 
 namespace Ambulance.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class AmbulanceInfoController : ControllerBase
     {
@@ -49,6 +49,18 @@ namespace Ambulance.API.Controllers
             };
 
             int result = await _mediator.Send(@class);
+
+            return Ok(result);
+        }
+        [HttpGet]
+        public async ValueTask<IActionResult> GetByIdAsync(int Id)
+        {
+            GetAmbulanceInfoByIdQuery @class = new GetAmbulanceInfoByIdQuery()
+            {
+                Id =Id
+            };
+
+            AmbulanceInfo result = await _mediator.Send(@class);
 
             return Ok(result);
         }
