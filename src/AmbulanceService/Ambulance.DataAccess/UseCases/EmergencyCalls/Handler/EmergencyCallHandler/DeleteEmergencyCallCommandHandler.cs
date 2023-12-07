@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Ambulance.Application.UseCases.EmergencyCalls.Handler.EmergencyCallHandler
 {
-    public class DeleteEmergencyCallCommandHandler : IRequestHandler<DeleteEmergencyCallCommand, bool>
+    public class DeleteEmergencyCallCommandHandler : IRequestHandler<DeleteAmbulanceInfoHandler, bool>
     {
         private readonly IAmbulanceDbContext _context;
 
@@ -23,7 +23,7 @@ namespace Ambulance.Application.UseCases.EmergencyCalls.Handler.EmergencyCallHan
 
 
 
-        public Task<bool> Handle(DeleteEmergencyCallCommand request, CancellationToken cancellationToken)
+        public Task<bool> Handle(DeleteAmbulanceInfoHandler request, CancellationToken cancellationToken)
         {
             var emergencyCall = _context.emergencyCalls.FirstOrDefault(x => x.Id == request.Id);
 
