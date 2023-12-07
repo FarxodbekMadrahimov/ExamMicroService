@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ambulance.Application.UseCases.EmergencyCalls.Command.EmergencyCommand
+namespace Ambulance.Application.UseCases.Doctors.Command.DoctorCommands
 {
-    public class DeleteAmbulanceInfoHandler : IRequest<bool>
+    public class DeleteDoctorCommand : IRequest<int>
     {
         public int Id { get; set; }
     }

@@ -43,7 +43,7 @@ public class EmergencyCallController : ControllerBase
     [HttpDelete("{id}")]
     public async ValueTask<ActionResult<bool>> DeletePersonAsync(int id)
     {
-        var command = new DeleteEmergencyCallCommand()
+        var command = new DeleteAmbulanceInfoHandler()
         {
             Id = id
         };
@@ -63,7 +63,7 @@ public class EmergencyCallController : ControllerBase
     [HttpGet]
     public async ValueTask<IActionResult> GetByIdAsync(int Id)
     {
-        GetemergencyCallByIdQuery @EmrgencyCall = new GetemergencyCallByIdQuery()
+        GetEmergencyCallByIdQueries @EmrgencyCall = new GetEmergencyCallByIdQueries()
         {
             Id = Id,
         };
@@ -72,4 +72,5 @@ public class EmergencyCallController : ControllerBase
 
         return Ok(result);
     }
+
 }

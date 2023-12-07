@@ -17,6 +17,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.14" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,14 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="UseCases\EmergencyCalls\Command\AmbulanceInfoCommand\" />
-    <Folder Include="UseCases\EmergencyCalls\Command\DoctorCommand\" />
     <Folder Include="UseCases\EmergencyCalls\Command\PatientCommand\" />
     <Folder Include="UseCases\EmergencyCalls\Handler\DoctorHandler\" />
-    <Folder Include="UseCases\EmergencyCalls\Handler\AmbulanceInfoHandler\" />
     <Folder Include="UseCases\EmergencyCalls\Handler\PatientHandler\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\DoctorQueries\" />
-    <Folder Include="UseCases\EmergencyCalls\Queries\AmbulanceInfoQueries\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\PatientQueries\" />
   </ItemGroup>
 

@@ -1,17 +1,17 @@
-﻿using Ambulance.Domain.Entitites.EmergencyCalls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace Ambulance.Domain.Dtos.AmbulanceInfoDtos
+namespace Ambulance.Domain.updateDtos
 {
-    public class AmbulanceInfoDto
-    {        
+    public class AmbulanceUpdateDto
+    {
+        public int Id;
         public string Model { get; set; }
+
         public bool Available { get; set; }
     }
 }
