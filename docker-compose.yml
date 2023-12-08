@@ -1,31 +1,18 @@
 version: '3.4'
 networks:
   backend:
-
 services:
-  ambulancesdata:
-    container_name: ambulamce-dbcontaineroff
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=pa@2or$%%dd
-    networks:
-     - backend
-    ports:
-      - 6007:1433
-
-
   ambulance.api:
-    container_name: ambulamce-dbcontainer
-    image: ${DOCKER_REGISTRY-}ambulancaapi
+    image: ${DOCKER_REGISTRY-}ambulanceapi
     build:
       context: .
       dockerfile: src/AmbulanceService/Ambulance.API/Dockerfile
-    networks:
-     - backend
+  SqlServer:
+    image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
-      - DB_HOST=ambulancesdata
-      - DB_NAME=AmbulancesData
-      - DB_SA_PASSWORD=pa@2or$%%dd
-
-    
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Numsey#2022
+    ports:
+      - "1470:1433"
+    volumes:
+      - ./poliklinika-data:/var/lib/postgresql/data

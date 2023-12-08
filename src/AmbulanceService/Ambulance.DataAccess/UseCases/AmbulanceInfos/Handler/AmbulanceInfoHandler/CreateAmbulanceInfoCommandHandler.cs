@@ -23,10 +23,7 @@ namespace Ambulance.Application.UseCases.AmbulanceInfos.Handler.AmbulanceInfoHan
         public async Task<int> Handle(CreateAmbulanceInfoCommand request, CancellationToken cancellationToken)
         {
             AmbulanceInfo ? ambulanceInfo = await _context.amulanceInfo.FirstOrDefaultAsync( cancellationToken);
-            if (ambulanceInfo == null)
-            {
-                throw new Exception();
-            }
+
             AmbulanceInfo info = new AmbulanceInfo() 
             {
                 Model = request.Model,

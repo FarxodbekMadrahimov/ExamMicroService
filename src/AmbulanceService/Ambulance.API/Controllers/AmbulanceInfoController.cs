@@ -5,6 +5,7 @@ using Ambulance.Domain.Entitites.AmbulancesInfo;
 using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using System.Security.Claims;
 
 namespace Ambulance.API.Controllers
@@ -15,10 +16,12 @@ namespace Ambulance.API.Controllers
     {
 
         private readonly IMediator _mediator;
+        private readonly IMemoryCache _memCache;
 
-        public AmbulanceInfoController(IMediator mediator)
+        public AmbulanceInfoController(IMediator mediator, IMemoryCache memCache)
         {
             _mediator = mediator;
+            _memCache = memCache;
         }
         [HttpPost]
         public async ValueTask<IActionResult> PostAsync([FromForm] CreateAmbulanceInfoCommand AmbulanceInfo)
@@ -30,9 +33,16 @@ namespace Ambulance.API.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetAllAsync()
         {
-            IEnumerable<AmbulanceInfo> classes = await _mediator.Send(new GetAllAmbulanceInfoQuery());
+            var cache = _memCache.Get("getallAInfo");
 
-            return Ok(classes);
+            if(cache == null)
+            {
+                IEnumerable<AmbulanceInfo> classes = await _mediator.Send(new GetAllAmbulanceInfoQuery());
+               
+                _memCache.Set("getallAInfo", classes);
+            }
+
+            return Ok(_memCache.Get("getallAInfo") as IEnumerable<AmbulanceInfo>);
         }
         [HttpPut]
         public async ValueTask<IActionResult> UpdateAsync([FromForm] UpdateAmbulanceInfoCommand @updateAmbulanceInfoCommandHandler)
@@ -55,14 +65,21 @@ namespace Ambulance.API.Controllers
         [HttpGet]
         public async ValueTask<IActionResult> GetByIdAsync(int Id)
         {
-            GetAmbulanceInfoByIdQuery @class = new GetAmbulanceInfoByIdQuery()
+            var cache = _memCache.Get(Id);
+
+            if (cache == null)
             {
-                Id =Id
-            };
+                GetAmbulanceInfoByIdQuery @class = new GetAmbulanceInfoByIdQuery()
+                {
+                    Id = Id
+                };
 
-            AmbulanceInfo result = await _mediator.Send(@class);
+                AmbulanceInfo result = await _mediator.Send(@class);
 
-            return Ok(result);
+                _memCache.Set(Id, result);
+            }
+
+            return Ok(_memCache.Get(Id));
         }
 
     }
