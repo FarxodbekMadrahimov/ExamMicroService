@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>5209a2e3-de74-4984-a30d-8e13cb5798fe</ProjectGuid>
+    <ProjectGuid>ecfb00b3-ce47-4092-a80d-0d07bbb51a0b</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>ambulance.api</DockerServiceName>

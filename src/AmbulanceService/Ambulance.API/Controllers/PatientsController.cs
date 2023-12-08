@@ -1,16 +1,7 @@
-﻿using Ambulance.Application.UseCases.AmbulanceInfos.Commands.AmbulanceInfoCommand;
-using Ambulance.Application.UseCases.AmbulanceInfos.Queries.AmbulanceInfoQueries;
-using Ambulance.Application.UseCases.Doctors.Command.DoctorCommands;
-using Ambulance.Application.UseCases.EmergencyCalls.Command.EmergencyCommand;
-using Ambulance.Application.UseCases.EmergencyCalls.Queries.EmergencyCallQueries;
-using Ambulance.Application.UseCases.Patients.Command.PatientCommands;
+﻿using Ambulance.Application.UseCases.Patients.Command.PatientCommands;
 using Ambulance.Application.UseCases.Patients.Queries.PatientQueries;
-using Ambulance.Domain.Dtos.PatientDtos;
-using Ambulance.Domain.Entitites.AmbulancesInfo;
-using Ambulance.Domain.Entitites.EmergencyCalls;
 using Ambulance.Domain.Entitites.Patients;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Ambulance.API.Controllers

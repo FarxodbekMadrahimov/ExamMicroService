@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurent.API", "src\Resta
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurent.Application", "src\RestaurentService\Restaurent.Application\Restaurent.Application\Restaurent.Application.csproj", "{C17C63B4-DCB8-40BC-A0C2-2AD2F7AFFC4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurent.Infrastructures", "src\RestaurentService\Restaurent.Infrastructure\Restaurent.Infrastructures.csproj", "{5CAA8478-075E-4866-A13E-B17497E9EE33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurent.Infrastructures", "src\RestaurentService\Restaurent.Infrastructure\Restaurent.Infrastructures.csproj", "{5CAA8478-075E-4866-A13E-B17497E9EE33}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{ECFB00B3-CE47-4092-A80D-0D07BBB51A0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{5CAA8478-075E-4866-A13E-B17497E9EE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CAA8478-075E-4866-A13E-B17497E9EE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CAA8478-075E-4866-A13E-B17497E9EE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECFB00B3-CE47-4092-A80D-0D07BBB51A0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECFB00B3-CE47-4092-A80D-0D07BBB51A0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECFB00B3-CE47-4092-A80D-0D07BBB51A0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECFB00B3-CE47-4092-A80D-0D07BBB51A0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

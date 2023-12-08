@@ -3,6 +3,7 @@ using Restaurent.Application.Absreactions;
 using Restaurent.Domain.Entities.MenuItems;
 using Restaurent.Domain.Entities.OrderItems;
 using Restaurent.Domain.Entities.Orders;
+using Restaurent.Infrastructures.EnityConfiguration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,5 +23,15 @@ namespace Restaurent.Infrastructures.Persistance
         public DbSet<OrderItem> orderItems { get ; set ; }
         public DbSet<Order> orders { get ; set ; }
         public DbSet<MenuItem> menuItems { get ; set ; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new OrderConfiguration());
+            modelBuilder.ApplyConfiguration(new MenuItemConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
+
+            
+
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

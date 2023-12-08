@@ -16,19 +16,15 @@ builder.Services.AddDbContext<AmbulanceDbContext>(options => options.UseSqlServe
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-
-
-
-
+builder.Services.AddMemoryCache();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+
 
 app.UseHttpsRedirection();
 
