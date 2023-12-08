@@ -22,10 +22,7 @@ namespace Restaurent.Application.Absreactions.UseCases.MenuItems.Handler.MenuIte
         public async Task<int> Handle(CreateMenuItemCommand request, CancellationToken cancellationToken)
         {
             MenuItem? ambulanceInfo = await _context.menuItems.FirstOrDefaultAsync(cancellationToken);
-            if (ambulanceInfo == null)
-            {
-                throw new Exception();
-            }
+
             MenuItem info = new MenuItem()
             {
                 Name = request.Name,

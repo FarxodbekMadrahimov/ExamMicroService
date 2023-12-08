@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Restaurent.Infrastructures.Persistance;
 
@@ -11,9 +12,11 @@ using Restaurent.Infrastructures.Persistance;
 namespace Restaurent.Infrastructures.Migrations
 {
     [DbContext(typeof(RestaurentDbContext))]
-    partial class RestaurentDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231208145726_sdd")]
+    partial class sdd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
