@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Ambulance.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class dockerd : Migration
+    public partial class plsss : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

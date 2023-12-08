@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -20,7 +22,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Users\farho\source\repos\Restaurent.Infrastructure\Restaurent.Infrastructure.csproj" />
+    <ProjectReference Include="..\Restaurent.Application\Restaurent.Application\Restaurent.Application.csproj" />
+    <ProjectReference Include="..\Restaurent.Infrastructure\Restaurent.Infrastructures.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ namespace Ambulance.Application
 {
     public static class DependecyInjection
     {
-        public static IServiceCollection AddAplication(this IServiceCollection services)
+        public static IServiceCollection AddAplications(this IServiceCollection services)
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddStackExchangeRedisCache(options =>

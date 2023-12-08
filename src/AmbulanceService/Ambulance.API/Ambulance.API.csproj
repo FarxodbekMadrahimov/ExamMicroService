@@ -18,6 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\RestaurentService\Restaurent.Application\Restaurent.Application\Restaurent.Application.csproj" />
+    <ProjectReference Include="..\..\RestaurentService\Restaurent.Infrastructure\Restaurent.Infrastructures.csproj" />
     <ProjectReference Include="..\Ambulance.DataAccess\Ambulance.Application.csproj" />
     <ProjectReference Include="..\Ambulance.Infrastructure\Ambulance.Infrastructure.csproj" />
   </ItemGroup>
