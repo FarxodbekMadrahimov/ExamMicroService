@@ -26,8 +26,6 @@
 
   <ItemGroup>
     <Folder Include="UseCases\EmergencyCalls\Command\PatientCommand\" />
-    <Folder Include="UseCases\EmergencyCalls\Handler\DoctorHandler\" />
-    <Folder Include="UseCases\EmergencyCalls\Handler\PatientHandler\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\DoctorQueries\" />
     <Folder Include="UseCases\EmergencyCalls\Queries\PatientQueries\" />
   </ItemGroup>

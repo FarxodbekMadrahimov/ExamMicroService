@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Ambulance.Infrastructure.Migrations
 {
     [DbContext(typeof(AmbulanceDbContext))]
-    [Migration("20231206131352_initau")]
-    partial class initau
+    [Migration("20231207195506_plsxss")]
+    partial class plsxss
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

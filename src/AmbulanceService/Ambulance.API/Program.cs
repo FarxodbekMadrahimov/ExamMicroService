@@ -1,20 +1,21 @@
-using MediatR;
 using Ambulance.Infrastructure;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
 using Ambulance.Application;
+using Microsoft.EntityFrameworkCore;
+
+
+using Ambulance.Infrastructure.Persistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddAplication();
+
+builder.Services.AddInfrastructures(builder.Configuration);
+builder.Services.AddAplications();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddDbContext<AmbulanceDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
 
 
 

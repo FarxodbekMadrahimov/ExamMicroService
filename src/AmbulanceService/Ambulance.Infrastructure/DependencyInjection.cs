@@ -10,7 +10,7 @@ namespace Ambulance.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructures(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<IAmbulanceDbContext, AmbulanceDbContext>(options =>
             {

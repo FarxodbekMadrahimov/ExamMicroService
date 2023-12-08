@@ -1,0 +1,17 @@
+{
+  "Routes": [
+    //patient controller
+    {
+      "UpstreamPathTemplate": "/api/Patient",
+      "UpstreamHttpMethod": [ "Post", "Get", "Update", "Delete", "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ambulance.api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Patient"
+    }
+  ]
+}
