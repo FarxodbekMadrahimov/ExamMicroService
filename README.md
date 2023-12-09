@@ -8,3 +8,4 @@ va ohrida order item qoshiladi unga menu item va order item idsi kerak unga qoun
 va bu servicelarning hammasi CRUD ishlaydi 
 dockerga tegmagan yaxhi chunki umuman ishlamay qoldi kechasi bilan togirlashga urnidm foydasi bolmadi
 mabodo ishlab qolsa dockerni ozingizda ham yoqib qoyishingiz shart
+![Screenshot 2023-12-07 190612](https://github.com/FarxodbekMadrahimov/ExamMicroService/assets/110379042/357e0a45-300b-4888-896c-3c1fceec4cf4)
