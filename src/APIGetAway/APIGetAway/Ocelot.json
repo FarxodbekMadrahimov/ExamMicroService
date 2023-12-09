@@ -1,0 +1,19 @@
+{
+  "Routes": [
+    {
+      //get all users
+      "DownstreamPathTemplate": "/api/ambulanceinfo",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "ambulance.api",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/api/ambulanceinfo",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:8087"
+  }
+}
