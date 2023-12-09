@@ -6,6 +6,7 @@ va restaurent serive u juda oddiy yaratilgan  servicemni ishlatish uchun avvalo 
 bu seriveda menu itemga ovqat nomi narxi va decription qoshiladi keyin esa order va unda totalamunt yoziladi date esa hoziri vaqtni oladi
 va ohrida order item qoshiladi unga menu item va order item idsi kerak unga qountitiy yoziladi 
 va bu servicelarning hammasi CRUD ishlaydi 
+ambulanceinfoda get get by id da cashing ishlatilgan shuning uchun update va delete qilganingizda ozgarmasligi mumkin
 dockerga tegmagan yaxhi chunki umuman ishlamay qoldi kechasi bilan togirlashga urnidm foydasi bolmadi
 mabodo ishlab qolsa dockerni ozingizda ham yoqib qoyishingiz shart
 ![Screenshot 2023-12-07 190612](https://github.com/FarxodbekMadrahimov/ExamMicroService/assets/110379042/357e0a45-300b-4888-896c-3c1fceec4cf4)
