@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 
 using Ambulance.Infrastructure.Persistance;
+using Ambulance.API;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddMemoryCache();
+builder.Services.AddHostedService<BackGroundMicroService>();
 
 var app = builder.Build();
 

@@ -2,6 +2,7 @@
 
 using Ambulance.Application;
 using Microsoft.EntityFrameworkCore;
+using Restaurent.API;
 using Restaurent.Application.Absreactions;
 
 using Restaurent.Infrastructures.Persistance;
@@ -21,6 +22,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<RestaurentDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 var app = builder.Build();
+
 
 
 // Configure the HTTP request pipeline.

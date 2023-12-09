@@ -6,7 +6,7 @@ using MediatR;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
-using System.Security.Claims;
+
 
 namespace Ambulance.API.Controllers
 {
