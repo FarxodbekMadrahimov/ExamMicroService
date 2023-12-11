@@ -1,18 +1,27 @@
 version: '3.4'
 networks:
   backend:
+
 services:
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Numsey#2022
+    networks:
+      - backend
+    ports:
+      - "6655:1433"
+    volumes:
+      - ./poliklinika-data:/var/lib/postgresql/data
+ 
+
   ambulance.api:
     image: ${DOCKER_REGISTRY-}ambulanceapi
     build:
       context: .
       dockerfile: src/AmbulanceService/Ambulance.API/Dockerfile
-  SqlServer:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=Numsey#2022
-    ports:
-      - "1470:1433"
-    volumes:
-      - ./poliklinika-data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  
