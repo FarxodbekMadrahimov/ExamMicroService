@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Ambulance.Application.UseCases.AmbulanceInfos.Handler.AmbulanceInfoHandler
 {
-    public class DeleteAmbulanceInfoCommandHandler: IRequestHandler<DeleteAmbulanceInfoCommand,int>
+    public class DeleteAmbulanceInfoCommandHandler : IRequestHandler<DeleteAmbulanceInfoCommand,int>
     {
         private readonly IAmbulanceDbContext _context;
         public DeleteAmbulanceInfoCommandHandler(IAmbulanceDbContext context)

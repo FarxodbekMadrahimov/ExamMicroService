@@ -16,7 +16,7 @@ namespace Ambulance.Application.UseCases.AmbulanceInfos.Handler.AmbulanceInfoHan
         private readonly IAmbulanceDbContext _context;
 
         public GetAmbulanceInfoCommandHandler(IAmbulanceDbContext context)
-        {
+        {   
             _context = context;
         }
 
